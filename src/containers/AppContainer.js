@@ -26,7 +26,7 @@ class AppContainer extends Component {
       currentQuestionIndex,
     } = this.props;
     const isPreviousDisabled = !(currentQuestionIndex > 0);
-    const isNextDisabled = !(currentQuestionIndex < questions.length &&
+    const isNextDisabled = !(currentQuestionIndex < (questions.length - 1) &&
       (!questions[currentQuestionIndex].is_required || questions[currentQuestionIndex].isValid));
 
     return (
